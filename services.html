@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Services - Indian Airlines</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f6f9fc 0%, #ffffff 100%);
+            color: #2c3e50;
+            padding-top: 80px;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-size: 32px;
+            font-weight: 600;
+            color: #3498db;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            color: #2980b9;
+        }
+
+        .nav-link {
+            color: #2c3e50;
+            font-size: 16px;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3498db;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: #3498db;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card:hover:before {
+            opacity: 0.05;
+        }
+
+        .service-card h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            font-weight: 600;
+            margin: 25px 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-icon {
+            font-size: 48px;
+            background: linear-gradient(45deg, #3498db, #2ecc71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .container {
+            padding: 60px 15px;
+            max-width: 1200px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Indian Airlines</a>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="nav-link" href="homepage.html">Home</a></li>
+                <li><a class="nav-link" href="offers.html">Offers</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+                <li><a class="nav-link" href="services.html">Services</a></li>
+                <li><a class="nav-link" href="login.php">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="section-title">
+            <h1>Our Premium Services</h1>
+            <p>Experience the difference with our comprehensive range of services designed for your comfort and convenience.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-box service-icon"></i>
+                    <h2>CarGo Services</h2>
+                    <p>Send documents, samples, consolidations, auto parts, machine parts, fabrics, personal effects, and more with our efficient cargo services.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-wheelchair service-icon"></i>
+                    <h2>Disability Services</h2>
+                    <p>We provide caring customer service to passengers with disabilities. Please notify us 48 hours before departure for special assistance.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-card">
+                    <i class="fas fa-utensils service-icon"></i>
+                    <h2>SnacCombo</h2>
+                    <p>Pre-book your choice of snacks and beverages to enhance your flying experience with our delicious in-flight menu.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-suitcase service-icon"></i>
+                    <h2>Track Your Bag</h2>
+                    <p>Keep track of your baggage in real-time. We're committed to ensuring your belongings reach their destination safely.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-clock service-icon"></i>
+                    <h2>Flight Schedule</h2>
+                    <p>Search and view flight schedules easily by selecting your origin and destination points.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

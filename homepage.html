@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Indian Airlines - Book Your Flight</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/364283.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .navbar {
+            background: rgba(255,255,255,0.95);
+            padding: 20px 0;
+            border: none;
+        }
+
+        .navbar-brand {
+            font-size: 32px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .nav-link {
+            color: #2c3e50 !important;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .flight-search {
+            background: rgba(255,255,255,0.95);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-top: 80px;
+            color: #2c3e50;
+        }
+
+        .form-control {
+            height: 50px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .btn-search {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn-search:hover {
+            background: #2980b9;
+        }
+
+        .hero-text {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Indian Airlines</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="offers.html">Offers</a></li>
+                <li><a class="nav-link" href="pnr.html">View Tickets</a></li>
+                <li><a class="nav-link" href="login.php">Login</a></li>
+                <li><a class="nav-link" href="adminlogin.php">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 hero-text">
+                <h1>Find Your Perfect Flight</h1>
+                <p>Discover the world with comfort and convenience</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="flight-search">
+                    <form method="post" action="flights.php">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label>From</label>
+                                <select class="form-control" name="from" required>
+                                    <option value="">Select City</option>
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label>To</label>
+                                <select class="form-control" name="to" required>
+                                    <option value="">Select City</option>
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label>Departure Date</label>
+                                <input type="date" class="form-control" name="depdate" id="dateInput" required>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn-search">Search Flights</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+        let dateInput = document.getElementById('dateInput');
+        const cur_date = new Date();
+        const cur_month = cur_date.getMonth() > 9 ? cur_date.getMonth() + 1 : '0' + (cur_date.getMonth() + 1);
+        const cur_day = cur_date.getDate() > 9 ? cur_date.getDate() : '0' + cur_date.getDate();
+        const dateStr = cur_date.getFullYear() + '-' + cur_month + '-' + cur_day;
+        dateInput.setAttribute('min', dateStr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Us - Indian Airlines</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2c3e50;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #343a40;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/contact-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--light);
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-link {
+            color: var(--secondary);
+            font-weight: 500;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-card h2 {
+            color: var(--primary);
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-card p {
+            color: var(--light);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info i {
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">Indian Airlines</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pnr.html">View Tickets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="adminlogin.php">Admin</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-card">
+                        <h2><i class="fas fa-building"></i> Registered Office</h2>
+                        <div class="contact-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Central Wing, Ground Floor, Thapar House, 124, Janpath, New Delhi – 110001 India.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-card">
+                        <h2><i class="fas fa-briefcase"></i> Corporate Office</h2>
+                        <div class="contact-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Level 1, Tower C, Global Business Park, Mehrauli-Gurgaon Road, Gurgaon – 122 002, Haryana, India.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="contact-card">
+                        <h2><i class="fas fa-headset"></i> Customer Support</h2>
+                        <div class="contact-info">
+                            <i class="fas fa-phone-alt"></i>
+                            <p>+91-9999988888</p>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <p>support@jarvisairlines.com</p>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
